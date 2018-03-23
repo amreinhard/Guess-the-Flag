@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,6 +21,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOG-GT-I2T">
                                 <rect key="frame" x="87" y="100" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YOG-GT-I2T" secondAttribute="height" multiplier="2:1" id="CpI-ed-GUa"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PMQ-0b-R8r"/>
@@ -27,6 +31,9 @@
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Me3-lt-9ln">
                                 <rect key="frame" x="87" y="230" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Me3-lt-9ln" secondAttribute="height" multiplier="2:1" id="fI6-zd-uU7"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zhh-nf-Xhz"/>
@@ -34,6 +41,9 @@
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnw-zn-7gk">
                                 <rect key="frame" x="87" y="360" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gnw-zn-7gk" secondAttribute="height" multiplier="2:1" id="cer-85-Ubx"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I35-Cj-bDT"/>
@@ -42,10 +52,13 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="gnw-zn-7gk" firstAttribute="height" secondItem="Me3-lt-9ln" secondAttribute="height" id="DLW-zS-KW7"/>
                             <constraint firstItem="YOG-GT-I2T" firstAttribute="leading" secondItem="Me3-lt-9ln" secondAttribute="leading" id="H6W-yK-yJe"/>
                             <constraint firstItem="Me3-lt-9ln" firstAttribute="top" secondItem="YOG-GT-I2T" secondAttribute="bottom" constant="30" id="LOO-Y7-rXo"/>
                             <constraint firstItem="Me3-lt-9ln" firstAttribute="leading" secondItem="gnw-zn-7gk" secondAttribute="leading" id="MOe-NH-J7n"/>
                             <constraint firstItem="YOG-GT-I2T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="36" id="Mnt-AZ-kQy"/>
+                            <constraint firstItem="Me3-lt-9ln" firstAttribute="height" secondItem="YOG-GT-I2T" secondAttribute="height" id="PBv-NZ-r9M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gnw-zn-7gk" secondAttribute="bottom" constant="20" id="RJy-Wf-Vjk"/>
                             <constraint firstItem="gnw-zn-7gk" firstAttribute="top" secondItem="Me3-lt-9ln" secondAttribute="bottom" constant="30" id="fuK-cu-cxw"/>
                             <constraint firstItem="YOG-GT-I2T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="huk-zG-9O5"/>
                         </constraints>
